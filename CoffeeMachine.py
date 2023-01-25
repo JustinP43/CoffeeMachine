@@ -66,7 +66,8 @@ def dispense(coffee_type):
             change = round(money_inserted - cost,2)
             
             if money_inserted < cost:
-                print(f"You still owe: {'{0:.2f}'.format(change * -1)}.")    
+                print(f"You're short: {'{0:.2f}'.format(change * -1)}.  Money Refunded") 
+                money_inserted = 0   
             
         
         print(f"Here is ${'{0:.2f}'.format(change)} in change.")
@@ -114,13 +115,15 @@ while electricity:
     on_menu = False
 
     while not on_menu:
-        coffee = input("What would you like? (espresso/latte/capuccino): ").title()
+        coffee = input("What would you like? (espresso/latte/cappuccino): ").title()
         for i in range(0,len(menu)):
-            if coffee == menu[i]["name"] or coffee == "Report":
+            if coffee == menu[i]["name"] or coffee == "Report" or coffee = "Off":
                 on_menu = True
     
     if coffee == "Report":
         report()
+    elif coffee == "Off":
+        electricity = False
     else:
          dispense(coffee)
     
