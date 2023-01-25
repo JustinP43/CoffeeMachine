@@ -117,7 +117,7 @@ while electricity:
     while not on_menu:
         coffee = input("What would you like? (espresso/latte/cappuccino): ").title()
         for i in range(0,len(menu)):
-            if coffee == menu[i]["name"] or coffee == "Report" or coffee = "Off":
+            if coffee == menu[i]["name"] or coffee == "Report" or coffee == "Off":
                 on_menu = True
     
     if coffee == "Report":
