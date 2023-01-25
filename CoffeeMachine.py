@@ -126,7 +126,6 @@ while electricity:
         electricity = False
     else:
          dispense(coffee)
-
-         print("hi")
+         
     
     
